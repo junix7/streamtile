@@ -1,19 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width , initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>card</title>
+    <title>Stream Tile</title>
 </head>
 <body>
-    <h1>Chat de twitch</h1>
-    <iframe id="chat_embed"
-            src="https://www.twitch.tv/embed/mouredev/chat?parent=https://junix7.github.io"
-            height="500"
-            width="350">
-    </iframe>
+    <div class="content">
+        <div id="mydiv"> 
+            <div id="mydivheader">
+                <img id="myImage" src="images/male/nyan_male_normal.png">
+            </div>
+        </div> 
+        <div id="div">
+          <div id="divheader">
+          Notas</div>
+          <textarea>Text here..</textarea>
+            </div>
+         </div>
 
+         <div id="divi">
+          <div id="diviheader">
+            <audio controls>
+          <source src="media/audio.mp3" type="audio/mpeg">
+        </audio>
+          </div>
+            
+
+            </div>
+         </div>
+
+
+
+    <div class="panel">
+       <div class="interactions">
+        <!--male-->
+        <button >MALE....</button>
+            <button onclick="document.getElementById('myImage').src='images/male/nyan_male_angry1.png'">ANGRY 1</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_angry2.png'">ANGRY 2</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_laugh.png'">LAUGH</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_normal.png'">NORMAL</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_sad.png'">SAD</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_smile1.png'">SMILE 1</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_smile2.png'">SMILE 2</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_smile3.png'">SMILE 3</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_smirk.png'">SMIRK</button>
+        <button onclick="document.getElementById('myImage').src='images/male/nyan_male_surprised.png'">SURPRISED</button>
+        <br>
+        <!--female-->
+         <button >FEMALE</button>
+            <button onclick="document.getElementById('myImage').src='images/female/nyan_female_angry1.png'">ANGRY 1</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_angry2.png'">ANGRY 2</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_laugh.png'">LAUGH</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_normal.png'">NORMAL</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_sad.png'">SAD</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_smile1.png'">SMILE 1</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_smile2.png'">SMILE 2</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_smile3.png'">SMILE 3</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_smirk.png'">SMIRK</button>
+        <button onclick="document.getElementById('myImage').src='images/female/nyan_female_surprised.png'">SURPRISED</button>
+       </div>
+
+
+    <script type="text/javascript">
+        // Make the DIV element draggable:
+    dragElement(document.getElementById("mydiv"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      }
+       else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+    <script type="text/javascript">
+        // Make the DIV element draggable:
+    dragElement(document.getElementById("div"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      }
+       else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+
+    <script type="text/javascript">
+        // Make the DIV element draggable:
+    dragElement(document.getElementById("divi"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        // if present, the header is where you move the DIV from:
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      }
+       else {
+        // otherwise, move the DIV from anywhere inside the DIV:
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+
+      function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,81 @@
+
+body{
+	background-color: #ff6699;
+}
+
+.content{
+	background: url(images/backgrounds/temple1.png)no-repeat center;
+	background-size: cover;
+	width: 1200px;
+	height: 600px;
+	position: relative;
+	border:10px solid teal;
+	border-radius: 15px;
+}
+
+#mydivheader img{
+	width: 545px;
+}
+#mydiv {
+  	position: absolute;
+  	z-index: 9;
+  	text-align: center;
+}
+#mydivheader {
+  	padding: 10px;
+  	cursor: move;
+  	z-index: 10;
+  	color: #fff;
+}
+
+#div {
+  	position: absolute;
+  	/*z-index: 9;
+  	text-align: center;*/
+}
+
+#divheader {
+  	padding: 10px;
+  	cursor: move;
+  	z-index: 10;
+  	color: white;
+  	background-color: teal;
+  	border-radius: 15px;
+  	opacity: 0.7;
+}
+
+#div textarea{
+	border-radius: 15px;
+	font-size: 22px;
+	color: black;
+	padding: 15px;
+	opacity: 0.7;
+}
+
+
+#divi {
+  	position: absolute;
+  	/*z-index: 9;
+  	text-align: center;*/
+}
+
+#diviheader {
+  	padding: 10px;
+  	cursor: move;
+  	z-index: 10;
+  	color: white;
+  	background-color: teal;
+  	border-radius: 15px;
+  	opacity: 0.5;
+}
+
+#divi audio{
+	border-radius: 15px;
+	font-size: 22px;
+	color: black;
+	opacity: 0.7;
+}
+
+.panel{
+	margin-top: 50px;
+}
